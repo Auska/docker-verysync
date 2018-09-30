@@ -9,7 +9,7 @@ docker create --name=verysync \
 -v <path to verysync>:/verysync \
 -e PGID=<gid> -e PUID=<uid> \
 -e TZ=<timezone> \
--p 8886:8886 -p 6714:6714 \
+-p 8886:8886 -p 22330:22330 \
 auska/docker-verysync
 ```
 

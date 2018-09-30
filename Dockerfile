@@ -22,5 +22,5 @@ RUN \
 COPY root/ /
 
 # ports and volumes
-EXPOSE 8886
+EXPOSE 8886 22330
 VOLUME /verysync /mnt
