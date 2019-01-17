@@ -5,13 +5,13 @@ mkdir -p \
 	/verysync/config
 
 # copy
-tar Jxvf /defaults/verysync.tar.xz -C /tmp/
+tar zxvf /defaults/verysync.tar.gz -C /tmp/
 
 if [[ -f /verysync/verysync ]]; then
 	checksum=`md5sum /verysync/verysync | cut -d " " -f 1`
-	if [[ $checksum == "873bbb51f42e7c9dffe78762ceb4cbb5" ]]; then
+	if [[ $checksum == "fb2354ce6637f66c0c0f66359584a1a0" ]]; then
 		echo "Already the latest version"
-	elif [[ $checksum == "0e75f82ec8f8850b7fc73b5eebc346a2" ]]; then
+	elif [[ $checksum == "ce7d093fa4a19eb42424c85cab7dffa9" ]]; then
 		echo "Already the latest version"
 	else
 		if [[ `uname -m` == "x86_64" ]]; then
