@@ -28,3 +28,4 @@ In this instance `PUID=1001` and `PGID=1001`. To find yours use `id user` as bel
 
 + **0.0.1:** Rebase to alpine linux 3.8.
 + **1.0.4:** Update VerySync 1.0.4.
++ **1.0.5:** Update VerySync 1.0.5.

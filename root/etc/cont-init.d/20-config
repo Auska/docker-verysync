@@ -8,18 +8,7 @@ mkdir -p \
 tar zxvf /defaults/verysync.tar.gz -C /tmp/
 
 if [[ -f /verysync/verysync ]]; then
-	checksum=`md5sum /verysync/verysync | cut -d " " -f 1`
-	if [[ $checksum == "fb2354ce6637f66c0c0f66359584a1a0" ]]; then
-		echo "Already the latest version"
-	elif [[ $checksum == "ce7d093fa4a19eb42424c85cab7dffa9" ]]; then
-		echo "Already the latest version"
-	else
-		if [[ `uname -m` == "x86_64" ]]; then
-			cp -rf /tmp/verysync-x64 /verysync/verysync && echo "Install x64 ..."
-		else
-			cp -rf /tmp/verysync-x86 /verysync/verysync && echo "Install x86 ..."
-		fi
-	fi
+	echo "Already the latest version"
 else
 	if [[ `uname -m` == "x86_64" ]]; then
 		cp -rf /tmp/verysync-x64 /verysync/verysync && echo "Install x64 ..."
@@ -32,5 +21,6 @@ rm -rf /tmp/*
 
 # permissions
 chown abc:abc -R \
-	/verysync/ \
-	/mnt
+	/verysync \
+	/mnt \
+	/config
