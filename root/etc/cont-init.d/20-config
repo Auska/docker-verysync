@@ -22,5 +22,4 @@ rm -rf /tmp/*
 # permissions
 chown abc:abc -R \
 	/verysync \
-	/mnt \
-	/config
+	/mnt
