@@ -1,25 +1,11 @@
 #!/usr/bin/with-contenv bash
 
 # make folders
-mkdir -p \
-	/verysync/config
-
-# copy
-tar zxvf /defaults/verysync.tar.gz -C /tmp/
-
-if [[ -f /verysync/verysync ]]; then
-	echo "Already the latest version"
-else
-	if [[ `uname -m` == "x86_64" ]]; then
-		cp -rf /tmp/verysync-x64 /verysync/verysync && echo "Install x64 ..."
-	else
-		cp -rf /tmp/verysync-x86 /verysync/verysync && echo "Install x86 ..."
-	fi
-fi
+mkdir -p /config
 
 rm -rf /tmp/*
 
 # permissions
 chown abc:abc -R \
-	/verysync \
-	/mnt
+	/config \
+	/media
