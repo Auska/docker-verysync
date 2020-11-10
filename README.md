@@ -5,8 +5,8 @@ http://blog.auska.win
 
 ```
 docker create --name=verysync \
--v <path to downloads>:/mnt \
--v <path to verysync>:/verysync \
+-v <path to downloads>:/media \
+-v <path to verysync>:/config \
 -e PGID=<gid> -e PUID=<uid> \
 -e TZ=<timezone> \
 -p 8886:8886 -p 22330:22330 \
@@ -29,3 +29,4 @@ In this instance `PUID=1001` and `PGID=1001`. To find yours use `id user` as bel
 + **0.0.1:** Rebase to alpine linux 3.8.
 + **1.0.4:** Update VerySync 1.0.4.
 + **1.0.5:** Update VerySync 1.0.5.
++ **2.1.1:** Update VerySync 2.1.1.
