@@ -6,7 +6,7 @@ ARG VERSION
 LABEL build_version="blog.auska.win version:- ${VERSION} Build-date:- ${BUILD_DATE}"
 LABEL maintainer="Auska"
 
-ENV GLIBC_VERSION=2.32-r0 TZ=Asia/Shanghai PORT=8886 VER=2.1.1
+ENV GLIBC_VERSION=2.32-r0 TZ=Asia/Shanghai PORT=8886 VER=2.4.3
 
 RUN \
  echo "**** install packages ****" && \

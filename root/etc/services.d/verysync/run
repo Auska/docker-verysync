@@ -1,4 +1,4 @@
 #!/usr/bin/with-contenv bash
 
 exec \
-	s6-setuidgid abc /bin/verysync -home /config -gui-address "0.0.0.0:$PORT" -logfile /config/verysync.log
+	s6-setuidgid abc /bin/verysync -home /config -gui-address "0.0.0.0:$PORT" -no-browser -no-restart -logflags=0 -logfile /config/verysync.log
